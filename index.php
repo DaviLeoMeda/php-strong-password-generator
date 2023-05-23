@@ -15,7 +15,7 @@ $array_total = array_merge($words, $numbers, $symbols);
 if(isset($_GET['lenght'])){
     $passwordRan = [];
     $numberRandom = rand(0,count($array_total));
-    public function getArrayOfIntegers($array_total, $numberRandom, $lenght,$passwordRan){
+    getArrayOfIntegers($array_total, $numberRandom, $lenght,$passwordRan){
         
 
         while (count($passwordRan) <= $lenght){
