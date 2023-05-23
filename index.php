@@ -1,3 +1,68 @@
+<?php
+
+$lenght = isset($_GET['lenght']);
+
+
+$words = array( 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'w', 'x', 'y', 'z');
+$numbers = array( '0', '1', '2', '3', '4', '6', '7', '8', '9');
+$symbols = array( '_', '/', '.', '&', '%', '£', '*', '@', '#', '$', '§');
+
+$array_total = array_merge($words, $numbers, $symbols);
+
+// var_dump($array_total);
+
+
+if(isset($_GET['lenght'])){
+    $passwordRan = [];
+    $numberRandom = rand(0,count($array_total));
+    public function getArrayOfIntegers($array_total, $numberRandom, $lenght,$passwordRan){
+        
+
+        while (count($passwordRan) <= $lenght){
+
+            
+            $array_total[$numberRandom] = $passwordRan;
+        }
+        return $passwordRan;
+    }
+        
+    var_dump($passwordRan);
+
+    
+}
+
+
+// rand(min, max);
+// password = [];
+// if( isset($_GET['lenght'])) {
+//     for ($i = 0; $i < $lenght; $i++) {
+
+//     }
+
+
+    // $password = '';
+    // $array_total = [];
+    // if( $_GET['words']) {
+    //     $array_total = array_merge($array_total, $words);
+    // };
+    // if($_GET['numbers']) {
+    //     $array_total = array_merge($array_total, $numbers);
+    // };
+    // if($_GET['symbols']) {
+    //    $array_total = array_merge($array_total, $symbols); 
+    // };
+
+    // return $password .= $array_total[rand(count($array_total))];
+
+
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,18 +87,19 @@
         </header>
 
         <div class="bg-info text-center container rounded-2 my-3">
-            <h5 class="p-4">No valid parameters entered</h5>
+            <h5 class="p-4"><?php echo $password ?></h5>
         </div>
 
         <div class="bg-white container rounded-2">
-            <div class="row justify-content-between m-3 py-4">
-                <label class="col-3 " for="">Password Lenght:</label>
-                <input class="col-3 rounded-1"  type="text">
-            </div>
 
+            <form class="row justify-content-between m-3 py-4" action="" method="GET">
+                <label class="col-3 " for="">Password Lenght:</label>
+                <input class="col-2 rounded-1"  type="text" name="lenght">
+            </form>
+            
             <div class="row justify-content-between m-3 py-4">
                 <label class="col-4 " for="">Allow repeatings of one or more characters:</label>
-                <div class="col-3">
+                <div class="col-2">
 
                     <div>
                         <label for="">Yes</label>
