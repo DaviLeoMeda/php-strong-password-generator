@@ -1,10 +1,10 @@
 <?php
 
-include_once __DIR__ '/../include/partials/functions.php';
+include_once __DIR__ . '/include/partials/functions.php';
 
-include __DIR__'/../include/components/topStructureHtml.php';
+include __DIR__ . '/include/components/topStructureHtml.php';
 
-include __DIR__'/../include/components/bottomStructureHtml.php';
+include __DIR__ . '/include/components/bottomStructureHtml.php';
 
 
 

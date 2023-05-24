@@ -13,7 +13,7 @@
             <h5 class="p-4"><?php echo $password ?></h5>
         </div>
 
-        <form class="bg-white container rounded-2" action="password.php" method="GET">
+        <form class="bg-white container rounded-2" action="index.php" method="GET">
 
             <div class="row justify-content-between m-3 py-4">
                 <label class="col-3 " for="">Password Lenght:</label>
