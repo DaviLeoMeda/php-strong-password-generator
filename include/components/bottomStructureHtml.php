@@ -10,7 +10,7 @@
         </header>
 
         <div class="bg-info text-center container rounded-2 my-3">
-            <h5 class="p-4"><?php echo $password ?></h5>
+            <h5 class="p-4"><?php echo $_SESSION['password']?></h5>
         </div>
 
         <form class="bg-white container rounded-2" action="index.php" method="GET">

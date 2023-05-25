@@ -59,4 +59,6 @@ function createPassword($qtyLetters, $password, $repeatCha, $lenghtFiltered, $le
 }
 
 var_dump( createPassword($qtyLetters, $password, $repeatCha, $lenghtFiltered, $lenght ) );
+
+$_SESSION['password'] = createPassword($qtyLetters, $password, $repeatCha, $lenghtFiltered, $lenght );
 ?>
